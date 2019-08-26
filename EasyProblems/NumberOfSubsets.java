@@ -65,7 +65,7 @@ public class NumberOfSubsets {
 			 to_return = dp(arr , k ,i-1,mem);
 		else
 			 to_return = dp(arr,k-arr[i],i-1,mem) + dp(arr , k ,i-1,mem);
-			
+		mem.put(key, to_return);
 		return to_return;	
 	}
 }
