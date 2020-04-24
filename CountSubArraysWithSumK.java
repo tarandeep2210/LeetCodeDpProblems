@@ -24,16 +24,16 @@ public class CountSubArraysWithSumK {
 	  
 	  //O(n) Tc O(n) sc
 	  
-//	    public int subarraySum(int[] nums, int k) {
+//      public int subarraySum(int[] nums, int k) {
 //	        int count = 0;
+//          int sum=0;
+//          HashMap<Integer,Integer> map = new HashMap<>();
+//          map.put(0,1);
 //	        for (int start = 0; start < nums.length; start++) {
-//	            for (int end = start + 1; end <= nums.length; end++) {
-//	                int sum = 0;
-//	                for (int i = start; i < end; i++)
-//	                    sum += nums[i];
-//	                if (sum == k)
-//	                    count++;
-//	            }
+//	           sum+=nums[start];
+//              if(map.containsKey(sum-k))
+//                  count+=map.get(sum-k);
+//              map.put(sum,map.getOrDefault(sum,0)+1);
 //	        }
 //	        return count;
 //	    }
